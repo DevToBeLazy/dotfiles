@@ -2,7 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 
 
-    neofetch
 end
 
 set fish_greeting
@@ -13,6 +12,8 @@ set -Ux EZA_STANDARD_OPTIONS --icons --hyperlink
 # Fzf
 set -g FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always --line-range :500"
 set -g FZF_LEGACY_KEYBINDINGS 0
+
+fish_ssh_agent
 
 starship init fish | source
 zoxide init fish | source
