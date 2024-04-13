@@ -1,5 +1,6 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.lazyrc",
     "lazyvim.plugins.extras.lsp.none-ls"
   ],
   "news": {
