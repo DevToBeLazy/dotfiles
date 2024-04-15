@@ -2,21 +2,30 @@ import options from "options"
 
 const { sleep, reboot, logout, shutdown } = options.powermenu
 
-export type Action = "sleep" | "reboot" | "logout" | "shutdown"
+export type Action = "sleep" | "reboot" | "logout" | "shutdown";
 
 class PowerMenu extends Service {
     static {
-        Service.register(this, {}, {
-            "title": ["string"],
-            "cmd": ["string"],
-        })
+        Service.register(
+            this,
+            {},
+            {
+                title: ["string"],
+                cmd: ["string"],
+            },
+        )
     }
 
     #title = ""
     #cmd = ""
 
-    get title() { return this.#title }
-    get cmd() { return this.#cmd }
+    get title() {
+        return this.#title
+    }
+
+    get cmd() {
+        return this.#cmd
+    }
 
     action(action: Action) {
         [this.#cmd, this.#title] = {
@@ -38,6 +47,6 @@ class PowerMenu extends Service {
     }
 }
 
-const powermenu = new PowerMenu
+const powermenu = new PowerMenu()
 Object.assign(globalThis, { powermenu })
 export default powermenu

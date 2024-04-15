@@ -28,14 +28,19 @@ const {
 const popoverPaddingMultiplier = 1.6
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const t = (dark: Opt<any> | string, light: Opt<any> | string) => scheme.value === "dark"
-    ? `${dark}` : `${light}`
+const t = (dark: Opt<any> | string, light: Opt<any> | string) =>
+    scheme.value === "dark" ? `${dark}` : `${light}`
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const $ = (name: string, value: string | Opt<any>) => `$${name}: ${value};`
 
 const variables = () => [
-    $("bg", blur.value ? `transparentize(${t(dark.bg, light.bg)}, ${blur.value / 100})` : t(dark.bg, light.bg)),
+    $(
+        "bg",
+        blur.value
+            ? `transparentize(${t(dark.bg, light.bg)}, ${blur.value / 100})`
+            : t(dark.bg, light.bg),
+    ),
     $("fg", t(dark.fg, light.fg)),
 
     $("primary-bg", t(dark.primary.bg, light.primary.bg)),
@@ -52,20 +57,35 @@ const variables = () => [
 
     $("shadows", `${shadows}`),
 
-    $("widget-bg", `transparentize(${t(dark.widget, light.widget)}, ${widget.opacity.value / 100})`),
+    $(
+        "widget-bg",
+        `transparentize(${t(dark.widget, light.widget)}, ${widget.opacity.value / 100})`,
+    ),
 
-    $("hover-bg", `transparentize(${t(dark.widget, light.widget)}, ${(widget.opacity.value * .9) / 100})`),
+    $(
+        "hover-bg",
+        `transparentize(${t(dark.widget, light.widget)}, ${(widget.opacity.value * 0.9) / 100})`,
+    ),
     $("hover-fg", `lighten(${t(dark.fg, light.fg)}, 8%)`),
 
     $("border-width", `${border.width}px`),
-    $("border-color", `transparentize(${t(dark.border, light.border)}, ${border.opacity.value / 100})`),
+    $(
+        "border-color",
+        `transparentize(${t(dark.border, light.border)}, ${border.opacity.value / 100})`,
+    ),
     $("border", "$border-width solid $border-color"),
 
-    $("active-gradient", `linear-gradient(to right, ${t(dark.primary.bg, light.primary.bg)}, darken(${t(dark.primary.bg, light.primary.bg)}, 4%))`),
+    $(
+        "active-gradient",
+        `linear-gradient(to right, ${t(dark.primary.bg, light.primary.bg)}, darken(${t(dark.primary.bg, light.primary.bg)}, 4%))`,
+    ),
     $("shadow-color", t("rgba(0,0,0,.6)", "rgba(0,0,0,.4)")),
     $("text-shadow", t("2pt 2pt 2pt $shadow-color", "none")),
 
-    $("popover-border-color", `transparentize(${t(dark.border, light.border)}, ${Math.max(((border.opacity.value - 1) / 100), 0)})`),
+    $(
+        "popover-border-color",
+        `transparentize(${t(dark.border, light.border)}, ${Math.max((border.opacity.value - 1) / 100, 0)})`,
+    ),
     $("popover-padding", `$padding * ${popoverPaddingMultiplier}`),
     $("popover-radius", radius.value === 0 ? "0" : "$radius + $popover-padding"),
 
