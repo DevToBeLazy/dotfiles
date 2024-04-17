@@ -29,4 +29,9 @@
 !tmux
 !tmux/**
 
+tmux/plugins
+
+
+!tmux/
+
 !starship.toml
