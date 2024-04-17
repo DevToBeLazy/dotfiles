@@ -7,15 +7,15 @@ export type RowProps<T> = {
   title: string;
   note?: string;
   type?:
-    | "number"
-    | "color"
-    | "float"
-    | "object"
-    | "string"
-    | "enum"
-    | "boolean"
-    | "img"
-    | "font";
+  | "number"
+  | "color"
+  | "float"
+  | "object"
+  | "string"
+  | "enum"
+  | "boolean"
+  | "img"
+  | "font";
   enums?: string[];
   max?: number;
   min?: number;
