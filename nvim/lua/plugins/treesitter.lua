@@ -1,15 +1,35 @@
 return {
   { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" },
-  {
-    "theRealCarneiro/hyprland-vim-syntax",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    ft = "hypr",
-  },
 
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        "bash",
+        "c",
+        "diff",
+        "html",
+        "javascript",
+        "hyprlang",
+        "jsdoc",
+        "json",
+        "jsonc",
+        "lua",
+        "luadoc",
+        "luap",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "toml",
+        "tsx",
+        "typescript",
+        "vim",
+        "vimdoc",
+        "xml",
+        "yaml",
+
         "astro",
         "cmake",
         "cpp",
@@ -64,6 +84,15 @@ return {
       vim.filetype.add({
         extension = {
           mdx = "mdx",
+        },
+      })
+      vim.filetype.add({
+        extension = { rasi = "rasi" },
+        pattern = {
+          [".*/waybar/config"] = "jsonc",
+          [".*/mako/config"] = "dosini",
+          [".*/kitty/*.conf"] = "bash",
+          [".*/hypr/.*%.conf"] = "hyprlang",
         },
       })
       vim.treesitter.language.register("markdown", "mdx")
