@@ -28,7 +28,9 @@
 
 !tmux
 !tmux/**
-tmux/plugins
+
 !import_new_env
 
 !starship.toml
+
+!.gitmodules

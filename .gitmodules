@@ -1,0 +1,3 @@
+[submodule "tmux-sessionx"]
+	path = tmux/plugins/tmux-sessionx 
+	url = https://github.com/omerxx/tmux-sessionx.git
