@@ -1,6 +1,7 @@
 **
 
 !.gitignore
+!.gitmodules
 
 !ags
 !ags/**
@@ -33,4 +34,25 @@
 
 !starship.toml
 
-!.gitmodules
+!fontconfig
+!fontconfig/**
+
+!foot/
+!foot/**
+
+!anyrun
+!anyrun/**
+
+!fuzzel
+!fuzzel/**
+
+!mpv/
+!mpv/**
+
+!wlogout/
+!wlogout/**
+
+!zshrc.d
+!zshrc.d/**
+
+!thorium-flahs
