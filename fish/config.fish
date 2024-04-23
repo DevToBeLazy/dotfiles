@@ -27,6 +27,10 @@ fish_ssh_agent
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
+#cargo
+set --export CARGO_INSTALL "$HOME/.cargo"
+set --export PATH $CARGO_INSTALL/bin $PATH
+
 
 starship init fish | source
 zoxide init fish | source
