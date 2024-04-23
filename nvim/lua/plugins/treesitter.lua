@@ -1,5 +1,10 @@
 return {
   { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" },
+  {
+    "theRealCarneiro/hyprland-vim-syntax",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    ft = "hypr",
+  },
 
   {
     "nvim-treesitter/nvim-treesitter",
