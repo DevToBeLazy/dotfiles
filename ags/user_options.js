@@ -13,11 +13,17 @@ const userConfigOptions = {
     },
   },
   "overview": {
-    "scale": 0.18 - (0.18 * 0.33), // Relative to screen size
+    "scale": 0.18 - (0.18 * 0.5), // Relative to screen size
     "numOfRows": 2,
     "numOfCols": 5,
     "wsNumScale": 0.09,
     "wsNumMarginScale": 0.07,
+  },
+  "weather": {
+    "city": "Seoul",
+  },
+  "workspaces": {
+    "shown": 10,
   },
 }
 

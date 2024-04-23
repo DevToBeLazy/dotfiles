@@ -18,6 +18,7 @@ globalThis["mpris"] = Mpris;
 // Screen size
 export const SCREEN_WIDTH = Number(exec("bash -c \"xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1 | head -1\" | awk '{print $1}'"));
 export const SCREEN_HEIGHT = Number(exec("bash -c \"xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2 | head -1\" | awk '{print $1}'"));
+
 export const REAL_SCREEN_WIDTH = Number(exec("bash -c \"hyprctl monitors -j | gojq '.[].width / .[].scale' | awk '{print int($1+0.5)}'\""));
 export const REAL_SCREEN_HEIGHT = Number(exec("bash -c \"hyprctl monitors -j | gojq '.[].height / .[].scale' | awk '{print int($1+0.5)}'\""));
 // Mode switching
