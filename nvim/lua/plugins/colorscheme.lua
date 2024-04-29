@@ -6,6 +6,7 @@ return {
     priority = 1000,
     opts = {
       flavour = "macchiato",
+      transparent_background = true,
       -- color_overrides = {
       --   all = {
       --     text = "#ffffff",
