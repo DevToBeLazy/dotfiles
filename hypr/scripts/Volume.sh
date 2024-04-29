@@ -48,12 +48,12 @@ elif [ "$1" = "up" ]; then
 		fi
 		rm -f "$volume_file"
 
-		new_volume=$((previous_volume + 5))
+		new_volume=$((previous_volume + 1))
 		pamixer --set-volume "$new_volume"
 		echo "Volume increased to $new_volume."
 	else
 
-		new_volume=$((current_volume + 5))
+		new_volume=$((current_volume + 1))
 		pamixer --set-volume "$new_volume"
 		echo "Volume increased to $new_volume."
 	fi
@@ -68,11 +68,11 @@ elif [ "$1" = "down" ]; then
 			echo "Audio unmuted."
 		fi
 		rm -f "$volume_file"
-		new_volume=$((previous_volume - 5))
+		new_volume=$((previous_volume - 1))
 		pamixer --set-volume "$new_volume"
 		echo "Volume decreased to $new_volume."
 	else
-		new_volume=$((current_volume - 5))
+		new_volume=$((current_volume - 1))
 		pamixer --set-volume "$new_volume"
 		echo "Volume decreased to $new_volume."
 	fi
