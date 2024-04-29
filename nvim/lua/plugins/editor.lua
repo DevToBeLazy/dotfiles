@@ -1,4 +1,5 @@
 return {
+  { "davidgranstrom/nvim-markdown-preview" },
   -- {
   --   "jackMort/ChatGPT.nvim",
   --   event = "VeryLazy",
