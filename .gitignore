@@ -56,3 +56,6 @@
 !zshrc.d/**
 
 !thorium-flahs
+
+!fcitx5/conf/waylandim.conf
+
