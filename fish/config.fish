@@ -36,7 +36,9 @@ set --export PATH $BUN_INSTALL/bin $PATH
 #cargo
 set --export CARGO_INSTALL "$HOME/.cargo"
 set --export PATH $CARGO_INSTALL/bin $PATH
-set --export OBSIDIAN_REST_API_KEY b4029ad8603baa85c40d16c6403e95bc00028fc2bcd2c41ac0a94da0642ae156
+
+# obsidian-rest-api 플러그인에서 생성한 뒤 적용
+set --export OBSIDIAN_REST_API_KEY c544b43f1f4cce88600a2e0f9c4a6198f2ca0e963b41393ac9cfb7367fc38e13
 
 starship init fish | source
 zoxide init fish | source
