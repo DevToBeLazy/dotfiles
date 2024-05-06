@@ -48,3 +48,4 @@ if vim.fn.has("nvim-0.8") == 1 then
 end
 
 vim.cmd([[autocmd BufNewFile,BufRead *.keymap setfiletype cpp ]])
+-- inside configlua
