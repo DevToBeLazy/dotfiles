@@ -36,7 +36,7 @@ return {
       workspaces = {
         {
           name = "BeLazy",
-          path = "/home/hyeongseokwoo/valuts/obsidian/",
+          path = "/home/hyeongseokwoo/vaults/obsidian/",
         },
         {
           name = "no-vault",
